@@ -1,0 +1,67 @@
+
+body {
+  background-color: #afd6dc;
+}
+
+.paragraph-styling {
+  background-color: white;
+  margin: 0;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.aboutFeyman{
+  font-size: 25px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #f9f68c;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 92%;
+}
+
+.para3{
+  text-align: center;
+}
+
+.feyHead{
+  text-align: center;
+}
+
+/* code for navigation bar, also used for feynman.html */
+nav{
+  height: 40px;
+  width: auto;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+a{
+  position: relative;
+  text-decoration:none;
+  font-family: 'Garamond', serif;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+a:after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover{
+  color: black;
+}
+
+a:hover:after{
+  width:100%;
+}

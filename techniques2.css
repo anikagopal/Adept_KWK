@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Background. Still fixing*/
+.home-page-body{
+  background-color: #faedcd;
+  background-image: url("https://media.discordapp.net/attachments/368995972975558656/859682824059486218/Untitled_Artwork.gif?width=964&height=676");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+}
+
+.shops-body, .ent-body, .abt-body, .resources-body {
+  background-color: #fafae0;
+}
+/* .ent-body {
+  background-color: #faedcd;
+} */
+
+h1, h2 {
+  text-align: center;
+
+  /* color: #fefae0; */
+}
+
+/* UPDATED MENU BAR!!! */
+
+/* STYLING FOR THE NAV BAR + MAIN CONTENT */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace;
+}
+/* allows the navigation bar to be seen */
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #CCD5AE;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+/* styles the logo section of the nav bar */
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+/* not really sure what this does lol */
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+/* spacing btwn each page in nav bar (expanded) */
+nav ul li{
+  margin: 0 5px;
+}
+
+/* styles the nav. bar pages (expanded/minimized view) */
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* hover for the nav bar pages -- changes color */
+nav ul li a.active,
+nav ul li a:hover{
+  color: #CA8F53;
+  
+  /* background: #B2C185; */
+}
+
+/* makes the menu icon seen */
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+/* idk */
+input[type="checkbox"]{
+  display: none;
+}
+
+/* makes the nav bar on the same row as the logo */
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+
+/* makes the minimized menu come onto the screen when the menu icon is clicked */
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #BBC893;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #CA8F53;
+  }
+}
+
+/* positioning/styling for the main content */
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color:white;
+  /* -webkit-text-stroke-color:rgb(114, 124, 82); */
+  -webkit-text-stroke-width: 0.5px;
+  
+}
+.headingMain{
+  /* margin-top: 50px; */
+   -webkit-text-stroke-color: #B3AC88; 
+   /* background-color: #f8edeb; */
+   border-radius: 15px;
+   /* width: 400px; */
+   margin-bottom: 50px;
+}
+
+.oori {
+  background:#f9e4b7;
+  padding:15px;
+  width:1050px;
+  margin-left:auto;
+  margin-right:auto;
+  color:white;
+  font-size: 60px;
+  border: 5px #B3AC88;
+
+}
+
+.missionHeader {
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: double white;
+  
+}
+
+.missionStatement {
+  /* font-size:25px; */
+  /*temp*/
+  background:#D0D9B3;
+  width:600px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right:auto;
+  border:5px solid white;
+  border-radius: 12px;
+  padding:25px;
+  padding-left:25;
+  padding-right:25;
+}
+
+/* positioning/styling for the main content pt. 2 LOL*/
+.content div{
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/* AAPI SHOPS PAGE STARTS HERE*/
+
+.filter-header{
+  text-align: center;
+  margin: 50px;
+  padding: 20px;
+  width: 900px;
+  background-color: #fafae0;
+  border: solid 7px #BBC893;
+  border-radius: 21px;
+}
+/*  --- FILTER STARTS HERE --- */
+/* centers the filter buttons! */
+.filter{
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+
+button{
+  background-color: rgb(224, 183, 149);
+  padding: 12px;
+  /* margin: 10px; */
+  border:transparent;
+  /* border: solid #CCD5AE; */
+  border-radius: 12px;
+}
+
+button:hover{
+  background-color: rgb(241, 209, 161);
+}
+
+.nowPlaying{
+  margin-top: 20px;
+  color: white;
+}
+
+/* FILTER END */
+/* PHOTO GALLERY FOR SHOPS STARTS HERE */
+.shop-gallery{
+  display: flex;
+  justify-content:center;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+.shop-container {
+  position: relative;
+  /* margin-left: 10px; */
+  
+}
+
+.indiv-shop {
+  display: block;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 2%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  transition: .5s ease;
+  background-color: #CCD5AE;
+  border-radius: 10px;
+  opacity: 0%;
+
+}
+.shop-container:hover .overlay {
+  opacity: 1;
+  
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+ -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* ---PHOTO GALLERY FOR SHOPS ENDS HERE --- */
+/* --- AAPI SHOPS PAGE ENDS HERE --- */
+
+
+/* ENTERTAINMENT PAGE STARTS HERE*/
+.ent-header{
+  text-align: center;
+  /* font-family: 'arial'; */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  padding: 1%;
+}
+
+.ent-description{
+  text-align: center;
+  padding: 4%;
+  /* padding-bottom: 0%  */
+}
+
+.spotify{
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+/* --- ENTERTAINMENT PAGE ENDS HERE --- */
+
+/* --- RESOURCES PAGE START ---*/
+.resourceImages{
+  position: relative;
+  width:400px;
+  height: 500px;
+  object-fit:cover;
+  margin-top: 30px;
+  margin-bottom:30px;
+  border-radius: 25px;
+  border:6px solid #ECCD9A;
+}
+/* #CCD5AE */
+
+.clickHeader{
+  margin:30px;
+  color:white;
+  padding:5px;
+  background:rgb(230, 194, 164);
+  border:5px double #FEFAE0;
+  align-items: center;
+  width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 12px;
+}
+
+.resources{
+  background:#FEFAE0;
+  text-decoration: none; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  align-items:center;
+
+}
+
+.clickCaption {
+  margin-bottom: 20px;
+  color: rgb(145, 108, 78);
+  
+}
+
+.resource-desc{
+  text-decoration: none;
+  font-size:  25px;
+  color: #916C4E;
+}
+
+.resource-desc:hover{
+  color: #c79a75;
+  text-decoration: none;
+}
+
+/* --- RESOURCES PAGE ENDS HERE --- */
+
+/* --- SUB-RESOURECES TEMPLATE PAGE STARTS HERE */
+.resources-header{
+  text-align: center;
+  padding-top: 5%;
+  /* padding-bottom: 0%; */
+}
+
+/* decorates the background of the header */
+/* .highlight{
+  background-color: #E9EDC9;
+  border-radius: 15px;
+  padding: 1%;
+} */
+
+/* INFO STARTS HERE */
+.info{
+  background-color: #E9EDC9;
+  border-radius: 20px;
+  width: 75%;
+  margin: 10%;
+  padding: 25px;
+}
+
+.info-header{
+  text-align: left;
+  padding-bottom: 10px;
+ }
+
+.info-blurb{
+  text-align: left;
+}
+/* INFO ENDS HERE */
+
+/* ACCORDION STARTS HERE */
+
+/*.accordion {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px;
+  border-color: black;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: grey;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: light green;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}*/
+
+
+/* ACCORDION ENDS HERE */
+
+/* --- SUB-RESOURCES TEMPLATE PAGE ENDS HERE */
+
+/* ABOUT US PAGE STARTS HERE */
+/* Header */
+.header-about{
+  margin-top: 5%;
+  /* TEMPORARY FONT */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  background:rgb(255, 251, 238);
+  padding-top:30px;
+  padding-bottom: 30px;
+  color:black;
+  border:5px solid white;
+  width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 15px;
+  }
+  
+.team-container{
+  text-align: center;
+  /* background: #FEFAE0; */
+}
+
+.sub-team-container{
+  max-width: 100%;
+  margin: auto;
+  padding: 48px 0;
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* flex-direction:column; */
+  justify-content: center;
+}
+
+.teams{
+  margin: 10px;
+  padding: 50px;
+  /* cursor: pointer; */
+  /* transition: 0.4s; */
+  box-sizing: border-box;
+  border-radius: 12px;
+  max-width: 30%;
+
+}
+
+.teamsImg{
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  border:3px solid rgb(240, 194, 148);
+}
+
+.name{
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.bio{
+  margin: 20px 0;
+  font-weight: lighter;
+  color: black;
+  background-color: #E9EDC9;
+  border-radius: 15px;
+}
+
+
+/* ABOUT US PAGE ENDS HERE */
+
+/* SOCIAL ISSUES PAGE STARTS HERE */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* ENTERTAINMENT PAGE */
+/* .spotify{
+  border: 15px solid white;
+  width:1000px;
+} */
+.quiz{
+  text-size: 3px;
+  text-emphasis: bold;
+  height:100%;
+  width:1080px;
+  background: #ECCD9A;
+  border:20px double #fff8e7;
+  color: #FAFDF3;
+  padding:25px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.quizHead{
+  color:#916C4E;
+}
+.ent-header {
+  background: #fff8e7;
+  margin-top:50px;
+  text-emphasis: bold;
+  color: #c3b091;
+  width:650px;
+  border:10px inset #c8cdba;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  font-style: cursive;
+  font-family: gabriola;
+  display: flex;
+  justify-content: center;
+}
+
+.ent-description {
+  color:white;
+  background:#b3ac88;
+  padding:5px;
+  height:30%;
+  width:500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* display: flex;
+  justify-content: center; */
+}
+
+
+
+/* sub resources accordion */
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: white;
+  font-color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: white;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* CAPTIONS
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 200px;
+  width: 257px;
+}
+
+
+
+<\style>
+<\head>

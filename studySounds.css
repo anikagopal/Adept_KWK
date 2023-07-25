@@ -1,0 +1,89 @@
+body {
+  background-color:  #1b172b;
+  background-image: url("https://gifdb.com/images/high/pixel-art-rainy-night-lap0nl4ap7ri2eav.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*.allB{
+  background-color:  #afd6dc;
+  padding-bottom:10px;
+  padding-top: 10px;
+  
+} */
+
+.studySoundsHeading {
+  margin: auto;
+  border-radius: 20px;
+  background-color: #f9f68c;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 250px;
+  
+}
+h1 {
+  background-color:  #afd6dc;
+  padding: 10px;
+}
+
+/* h2 {
+  padding: 5px;
+  background-color:  #afd6dc;
+} */
+
+.container {
+  width: 375px;
+  height: 200px;
+  margin-left: 25px;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.containerTwo {
+  width: 375px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: 25px;
+  margin-top: auto;
+}
+
+/* code for nav bar */
+nav{
+  height: 40px;
+  background-color:  #afd6dc;
+  width: auto;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+a{
+  position: relative;
+  text-decoration:none;
+  font-family: 'Garamond', serif;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+
+a:after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover{
+  color: black;
+}
+
+a:hover:after{
+  width:100%;
+}
+

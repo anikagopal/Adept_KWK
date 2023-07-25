@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="mindmap.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <h1 align="center">ADEPT</h1>
+  <!--navigation bar !-->
+  <nav>
+    <a href="index.html">Home</a> 
+    <a href="mindmapping.html">Mindmapping</a>
+    <a href="feynman.html">Feynman</a>
+    <a href="pomodoro.html">Pomodoro Timer</a>
+    <a href="moreTechniques.html">More Techniques</a>
+    <a href="studySounds.html">Study Sounds</a>
+  </nav>
+
+
+  
+  <div class = "wrapper">
+  <center><h2>Mind Map</h2></center>
+
+
+  <div id="container"></div>
+ <div class = "mindmapItems"></div>
+  
+  <script type="text/javascript" src="mindmap.js"></script>
+
+
+  <h3>Speech to Text Note Taker</h3>
+  
+ <!-- speech to text code!-->
+<div class="speaker" style="display: flex;justify-content: space-between;width: 13rem;box-shadow: 0 0 13px #0000003d;border-radius: 5px;">
+         <p id="action" style="color: grey;font-weight: 800; padding: 0; padding-left: 2rem;"></p>
+         <button onclick="runSpeechRecog()" style="border: transparent;padding: 0 0.5rem;">
+            Speech
+         </button>
+      </div>
+      <h3 id="output" class="hide"></h3>
+      <script>
+         runSpeechRecog = () => {
+            document.getElementById("output").innerHTML = "Loading text...";
+            var output = document.getElementById('output');
+            var action = document.getElementById('action');
+            let recognization = new webkitSpeechRecognition();
+            recognization.onstart = () => {
+               action.innerHTML = "Listening...";
+            }
+            recognization.onresult = (e) => {
+               var transcript = e.results[0][0].transcript;
+               output.innerHTML = transcript;
+               output.classList.remove("hide")
+               action.innerHTML = "";
+            }
+            recognization.start();
+         }
+      </script>
+
+  
+  <br><br>
+
+
+  
+
+       <!-- about thsi method code!-->
+<h3>About this method:</h3>
+  <div class="aboutPomodoro">
+    <p id="para3">
+      Mindmapping is a method of visual organization used to help effectively take notes and plan out assignments. The Mind Map above can be used to organize information, providing a visual hierarchy of ideas! Also, users can utilize the text to speech function to easily take notes while trying to fill out this organizer. 
+    </p>
+  </div>    
+
+
+
+  <!-- about thsi method code
+<h2 align="center">About this method:</h3>
+  <div class="aboutPomodoro">
+    <p class="para3">
+      The Pomodoro technique is a time management method that includes timed stretches of work and incorporates small breaks in between. This method increases concentration and boosts productivity while studying. Use the timer below to follow the pomodoro method. Also, use the to-do list below to keep track of tasks as you complete them!
+    </p>
+  </div>  !-->
+
+  <!-- </div> -->
+
+  
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+
+    <script src="mindmap.js"></script>
+  <script src="mindmap.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

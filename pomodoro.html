@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="pomodoro.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <center><h1>ADEPT</h1></center>
+  <!--navigation bar !-->
+  <nav>
+    <a href="index.html">Home</a> 
+    <a href="mindmapping.html">Mindmapping</a>
+    <a href="feynman.html">Feynman</a>
+    <a href="pomodoro.html">Pomodoro Timer</a>
+    <a href="moreTechniques.html">More Techniques</a>
+    <a href="studySounds.html">Study Sounds</a>
+  </nav>
+
+
+
+  
+  <!-- home for pomodoro technique !-->
+  
+ <!-- <center><h2 class = "pomodoroHeading">Pomodoro Timer</h2></center>
+  <div class = "aboutPomodoro">
+    <center><h3>About this method:</h3></center>
+    <center><p>The Pomodoro technique is a time management method that includes timed stretches of work and incorporates small breaks in between. This method increases concentration and boosts productivity while studying. Use the timer below to follow the pomodoro method. Also, use the to-do list below to keep track of tasks as you complete them!</p></center>
+  </div> !-->
+    <h2 class="pomHead">Pomodoro Timer</h2>
+<div class = "wrapper">
+  <h3 class="head3">About this method:</h3>
+  <div class="aboutPomodoro">
+    <p class="para3">
+      The Pomodoro technique is a time management method that includes timed stretches of work and incorporates small breaks in between. This method increases concentration and boosts productivity while studying. Use the timer below to follow the pomodoro method. Also, use the to-do list below to keep track of tasks as you complete them!
+    </p>
+  </div>
+  
+
+
+  
+
+  <!-- pomodoro timer !-->
+  <div id = "container">
+    <!-- labels !-->
+    <p id = "work" class = "label">
+      Work:
+    </p>
+        <p id = "break" class = "label">
+      Break:
+    </p>
+        <p id = "rounds" class = "label">
+      Rounds:
+    </p>
+    <!-- timer for work time !-->
+    <div id = "workTimer" class = "timer">
+      <p id = "workMinutes">30</p>
+      <p class = "colon">:</p>
+      <p id = "workSeconds">00</p>
+    </div>
+    <!-- timer for break time !-->
+    <div id = "breakTimer" class = "timer">
+      <p id = "breakMinutes">5</p>
+      <p class = "colon">:</p>
+      <p id = "breakSeconds">00</p>
+    </div>
+    <!-- rounds counter for pomodoro !-->
+    <p id = "counter" class = "timer">0</p>
+
+    <button id = "start" class = "timerButton">Start</button>
+    <button id = "stop" class = "timerButton">Stop</button>
+    <button id = "reset" class = "timerButton">Reset</button>
+  </div>
+
+  <!-- to do list !-->
+  <h3>To-Do List</h3>
+  <p>Feel free to enter study tasks here! To cross out a completed task, click on it. Double click to delete.</p>
+  <div class = "containerTwo">
+    <input id = "inputField" type = "text">
+    <button id = "addToList">Enter</button>
+    <div id = "toDoContainer" class = "toDoTasks">
+    </div>
+  </div>
+
+
+
+
+  </div>
+  <script src="pomodoro.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  
+</body>
+
+</html>

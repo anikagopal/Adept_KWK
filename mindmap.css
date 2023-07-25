@@ -1,0 +1,111 @@
+body {
+  background-color: #afd6dc;
+}
+
+/* code for navigation bar */
+nav{
+  height: 40px;
+  width: auto;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+a{
+  position: relative;
+  text-decoration:none;
+  font-family: 'Garamond', serif;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+a:after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+a:hover{
+  color: black;
+}
+
+a:hover:after{
+  width:100%;
+}
+
+
+/* Code for Mind Map CSS*/
+body {
+      
+    }
+
+    .f-col {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      background-color: #f9f68c;
+    }
+
+    #container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em;
+      min-width: 600px;
+      
+    }
+
+    #container p {
+      padding: 0.25em 0.5em;
+      background: #f3f3f3;
+      border: 3px solid black;
+      border-radius: 0.5em;
+      text-align: center;
+      max-width: 100px;
+  
+    }
+
+    svg {
+      position: absolute;
+      z-index: -1
+    }
+
+    .path {
+      stroke: black;
+      fill: none;
+      stroke-width: 2;
+    }
+
+/* h2 {
+  color: #5437e6;
+} */
+
+
+.aboutPomodoro{
+  font-size: 25px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #f9f68c;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 92%;
+}
+
+.wrapper {
+  padding-right: 10px;
+  padding-left: 10px;
+  max-width: 1150px;
+  min-width: 1150px;
+  margin: auto;
+}
+
+#para3 {
+  text-align: center;
+}

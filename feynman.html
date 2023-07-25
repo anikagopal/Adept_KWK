@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="feynmanMethod.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center><h1>ADEPT</h1></center>
+  <nav>
+    <a href="index.html">Home</a> 
+    <a href="mindmapping.html">Mindmapping</a>
+    <a href="feynman.html">Feynman</a>
+    <a href="pomodoro.html">Pomodoro Timer</a>
+    <a href="moreTechniques.html">More Techniques</a>
+    <a href="studySounds.html">Study Sounds</a>
+  </nav>
+
+  <h2 class="feyHead">Feynman Technique</h2>
+   <h3 class="head3">About this method:</h3>
+  <div class="aboutFeyman">
+    <p class="para3">
+      The Feynman technique is a study tactic which is great for revising things you need help sticking into your head before a big test. In this method, start by explaining your topic in detail as well as you can and then dumb it down into its main points. Finally you wanna take that dumbed down list of points and use to to pretend you are teaching this topic to someone aloud with the points as references.
+    </p>
+  </div>
+
+  <!-- <center><h2>Feynman Technique</h2></center>
+
+  <!-- about portion !-->
+  <!-- <div class = "aboutFeynman">
+    <center><h3>About this method:</h3></center>
+  <center><p>The Feynman technique is a study tactic which is great for revising things you need help sticking into your head before a big test. In this method, start by explaining your topic in detail as well as you can and then dumb it down into its main points. Finally you wanna take that dumbed down list of points and use to to pretend you are teaching this topic to someone aloud with the points as references.</p></center>
+  </div> -->
+
+  <!-- code for first text box !-->
+  <h3>What is your topic? Explain in detail. Click on text to delete.</h3>
+  
+  <div class = "containerTwo">
+    <input id = "inputField" type = "text">
+    <button id = "addToList">Enter</button>
+    <div id = "toDoContainer" class = "toDoTasks">
+    </div>
+  </div>
+  
+  
+<!-- code for second text box !-->
+  
+  <h3>What are the key points? List them out! Click on text to delete.</h3>
+  <div class = "containerTwoA">
+    <input id = "inputFieldA" type = "text">
+    <button id = "addToListA">Enter</button>
+    <div id = "toDoContainerA" class = "toDoTasksA">
+    </div>
+  </div>
+  
+
+
+
+
+  
+
+<div>
+    <h3>Finally, be the teacher! Speak allowed and teach the topic to someone! Don't know where to start? look at the first item on your list and explain it. You got this!</h3>
+</div>
+
+  
+<h3>To-Do List</h3>
+  <p>Feel free to enter study tasks here! To cross out a completed task, click on it. Double click to delete task.</p>
+  <div class = "containerTwoB">
+    <input id = "inputFieldB" type = "text">
+    <button id = "addToListB">Enter</button>
+    <div id = "toDoContainerB" class = "toDoTasksB">
+    </div>
+  </div>
+  
+
+  <script src="feynman.js"></script>
+
+</body>
